@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Country = ({ country }) => {
   const [weather, setWeather] = useState({});
-  const API_KEY = "76b4fe8f53f8de55182fe0b047de5298";
+  const API_KEY = "31bab9e43bd84a33519dbe0417218c24";
   useEffect(() => {
     axios
       .get(
