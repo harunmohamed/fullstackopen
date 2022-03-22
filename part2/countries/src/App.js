@@ -8,7 +8,7 @@ const App = () => {
 
   const searchCountries = input => {
     axios
-      .get(`https://restcountries.eu/rest/v2/name/${input}`)
+      .get(`https://restcountries.com/v2/name/${input}`)
       .then(response => {
         setCountries(response.data);
       })
