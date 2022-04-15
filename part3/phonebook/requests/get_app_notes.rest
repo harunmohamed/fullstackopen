@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/notes/
+Content-Type: application/json
+
+{
+    "content": "vs code rest client is lorem ispum ...",
+    "important": false
+}
+
+###
+GET http://localhost:3001/api/notes/
