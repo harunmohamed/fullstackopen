@@ -9,7 +9,7 @@ mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
     console.log('connecting to MongoDB')
 })
 .catch((error) => {
-    console.log('error connection to MongoDb:', error.message)
+    console.log('error connection to MongoDB:', error.message)
 })
 
 const personSchema = new mongoose.Schema({
