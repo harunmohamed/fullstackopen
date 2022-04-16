@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
 app.post('/api/persons', (request, response) => {
   const body = request.body;
-  if(body.name || body.number === undefined) {
+  if(body.name === undefined || body.number === undefined) {
     return response.status(400).json({error: 'please fill in the name and number'})
   }
 
@@ -91,6 +91,8 @@ const errorHandler = (error, request, response, next) => {
 
   if(error.name === 'CastError') {
     return response.status(400).send({error: 'malformed id'})
+  } else if (error.name === 'ValidationError') {
+    return response.status(400).json({error: error.message})
   }
   next(error)
 }
